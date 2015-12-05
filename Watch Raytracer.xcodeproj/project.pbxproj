@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFCDD14E1C1349BD0079C61B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD14D1C1349BD0079C61B /* main.m */; };
+		EFCDD1511C1349BD0079C61B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1501C1349BD0079C61B /* AppDelegate.m */; };
+		EFCDD1541C1349BD0079C61B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1531C1349BD0079C61B /* ViewController.m */; };
+		EFCDD1571C1349BD0079C61B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFCDD1551C1349BD0079C61B /* Main.storyboard */; };
+		EFCDD1591C1349BD0079C61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFCDD1581C1349BD0079C61B /* Assets.xcassets */; };
+		EFCDD15C1C1349BD0079C61B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFCDD15A1C1349BD0079C61B /* LaunchScreen.storyboard */; };
+		EFCDD1611C1349BD0079C61B /* Watch Raytracer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EFCDD1601C1349BD0079C61B /* Watch Raytracer WatchKit App.app */; };
+		EFCDD1671C1349BD0079C61B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFCDD1651C1349BD0079C61B /* Interface.storyboard */; };
+		EFCDD1691C1349BD0079C61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFCDD1681C1349BD0079C61B /* Assets.xcassets */; };
+		EFCDD1701C1349BD0079C61B /* Watch Raytracer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EFCDD16F1C1349BD0079C61B /* Watch Raytracer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EFCDD1761C1349BD0079C61B /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1751C1349BD0079C61B /* InterfaceController.m */; };
+		EFCDD1791C1349BD0079C61B /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1781C1349BD0079C61B /* ExtensionDelegate.m */; };
+		EFCDD17B1C1349BD0079C61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFCDD17A1C1349BD0079C61B /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFCDD1621C1349BD0079C61B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFCDD1411C1349BD0079C61B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFCDD15F1C1349BD0079C61B;
+			remoteInfo = "Watch Raytracer WatchKit App";
+		};
+		EFCDD1711C1349BD0079C61B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFCDD1411C1349BD0079C61B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFCDD16E1C1349BD0079C61B;
+			remoteInfo = "Watch Raytracer WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EFCDD1821C1349BD0079C61B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EFCDD1701C1349BD0079C61B /* Watch Raytracer WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCDD1861C1349BD0079C61B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				EFCDD1611C1349BD0079C61B /* Watch Raytracer WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EFCDD1491C1349BD0079C61B /* Watch Raytracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch Raytracer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCDD14D1C1349BD0079C61B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EFCDD14F1C1349BD0079C61B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EFCDD1501C1349BD0079C61B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EFCDD1521C1349BD0079C61B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EFCDD1531C1349BD0079C61B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EFCDD1561C1349BD0079C61B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFCDD1581C1349BD0079C61B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFCDD15B1C1349BD0079C61B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFCDD15D1C1349BD0079C61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFCDD1601C1349BD0079C61B /* Watch Raytracer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch Raytracer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCDD1661C1349BD0079C61B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		EFCDD1681C1349BD0079C61B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFCDD16A1C1349BD0079C61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFCDD16F1C1349BD0079C61B /* Watch Raytracer WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch Raytracer WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCDD1741C1349BD0079C61B /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		EFCDD1751C1349BD0079C61B /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		EFCDD1771C1349BD0079C61B /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		EFCDD1781C1349BD0079C61B /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		EFCDD17A1C1349BD0079C61B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFCDD17C1C1349BD0079C61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFCDD1461C1349BD0079C61B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCDD16C1C1349BD0079C61B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFCDD1401C1349BD0079C61B = {
+			isa = PBXGroup;
+			children = (
+				EFCDD14B1C1349BD0079C61B /* Watch Raytracer */,
+				EFCDD1641C1349BD0079C61B /* Watch Raytracer WatchKit App */,
+				EFCDD1731C1349BD0079C61B /* Watch Raytracer WatchKit Extension */,
+				EFCDD14A1C1349BD0079C61B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFCDD14A1C1349BD0079C61B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDD1491C1349BD0079C61B /* Watch Raytracer.app */,
+				EFCDD1601C1349BD0079C61B /* Watch Raytracer WatchKit App.app */,
+				EFCDD16F1C1349BD0079C61B /* Watch Raytracer WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFCDD14B1C1349BD0079C61B /* Watch Raytracer */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDD14F1C1349BD0079C61B /* AppDelegate.h */,
+				EFCDD1501C1349BD0079C61B /* AppDelegate.m */,
+				EFCDD1521C1349BD0079C61B /* ViewController.h */,
+				EFCDD1531C1349BD0079C61B /* ViewController.m */,
+				EFCDD1551C1349BD0079C61B /* Main.storyboard */,
+				EFCDD1581C1349BD0079C61B /* Assets.xcassets */,
+				EFCDD15A1C1349BD0079C61B /* LaunchScreen.storyboard */,
+				EFCDD15D1C1349BD0079C61B /* Info.plist */,
+				EFCDD14C1C1349BD0079C61B /* Supporting Files */,
+			);
+			path = "Watch Raytracer";
+			sourceTree = "<group>";
+		};
+		EFCDD14C1C1349BD0079C61B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDD14D1C1349BD0079C61B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFCDD1641C1349BD0079C61B /* Watch Raytracer WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDD1651C1349BD0079C61B /* Interface.storyboard */,
+				EFCDD1681C1349BD0079C61B /* Assets.xcassets */,
+				EFCDD16A1C1349BD0079C61B /* Info.plist */,
+			);
+			path = "Watch Raytracer WatchKit App";
+			sourceTree = "<group>";
+		};
+		EFCDD1731C1349BD0079C61B /* Watch Raytracer WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDD1741C1349BD0079C61B /* InterfaceController.h */,
+				EFCDD1751C1349BD0079C61B /* InterfaceController.m */,
+				EFCDD1771C1349BD0079C61B /* ExtensionDelegate.h */,
+				EFCDD1781C1349BD0079C61B /* ExtensionDelegate.m */,
+				EFCDD17A1C1349BD0079C61B /* Assets.xcassets */,
+				EFCDD17C1C1349BD0079C61B /* Info.plist */,
+			);
+			path = "Watch Raytracer WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFCDD1481C1349BD0079C61B /* Watch Raytracer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFCDD1871C1349BD0079C61B /* Build configuration list for PBXNativeTarget "Watch Raytracer" */;
+			buildPhases = (
+				EFCDD1451C1349BD0079C61B /* Sources */,
+				EFCDD1461C1349BD0079C61B /* Frameworks */,
+				EFCDD1471C1349BD0079C61B /* Resources */,
+				EFCDD1861C1349BD0079C61B /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFCDD1631C1349BD0079C61B /* PBXTargetDependency */,
+			);
+			name = "Watch Raytracer";
+			productName = "Watch Raytracer";
+			productReference = EFCDD1491C1349BD0079C61B /* Watch Raytracer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFCDD15F1C1349BD0079C61B /* Watch Raytracer WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFCDD1831C1349BD0079C61B /* Build configuration list for PBXNativeTarget "Watch Raytracer WatchKit App" */;
+			buildPhases = (
+				EFCDD15E1C1349BD0079C61B /* Resources */,
+				EFCDD1821C1349BD0079C61B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFCDD1721C1349BD0079C61B /* PBXTargetDependency */,
+			);
+			name = "Watch Raytracer WatchKit App";
+			productName = "Watch Raytracer WatchKit App";
+			productReference = EFCDD1601C1349BD0079C61B /* Watch Raytracer WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		EFCDD16E1C1349BD0079C61B /* Watch Raytracer WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFCDD17F1C1349BD0079C61B /* Build configuration list for PBXNativeTarget "Watch Raytracer WatchKit Extension" */;
+			buildPhases = (
+				EFCDD16B1C1349BD0079C61B /* Sources */,
+				EFCDD16C1C1349BD0079C61B /* Frameworks */,
+				EFCDD16D1C1349BD0079C61B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Watch Raytracer WatchKit Extension";
+			productName = "Watch Raytracer WatchKit Extension";
+			productReference = EFCDD16F1C1349BD0079C61B /* Watch Raytracer WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFCDD1411C1349BD0079C61B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = bluenose;
+				TargetAttributes = {
+					EFCDD1481C1349BD0079C61B = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					EFCDD15F1C1349BD0079C61B = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					EFCDD16E1C1349BD0079C61B = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = EFCDD1441C1349BD0079C61B /* Build configuration list for PBXProject "Watch Raytracer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFCDD1401C1349BD0079C61B;
+			productRefGroup = EFCDD14A1C1349BD0079C61B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFCDD1481C1349BD0079C61B /* Watch Raytracer */,
+				EFCDD15F1C1349BD0079C61B /* Watch Raytracer WatchKit App */,
+				EFCDD16E1C1349BD0079C61B /* Watch Raytracer WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFCDD1471C1349BD0079C61B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCDD15C1C1349BD0079C61B /* LaunchScreen.storyboard in Resources */,
+				EFCDD1591C1349BD0079C61B /* Assets.xcassets in Resources */,
+				EFCDD1571C1349BD0079C61B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCDD15E1C1349BD0079C61B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCDD1691C1349BD0079C61B /* Assets.xcassets in Resources */,
+				EFCDD1671C1349BD0079C61B /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCDD16D1C1349BD0079C61B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCDD17B1C1349BD0079C61B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFCDD1451C1349BD0079C61B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCDD1541C1349BD0079C61B /* ViewController.m in Sources */,
+				EFCDD1511C1349BD0079C61B /* AppDelegate.m in Sources */,
+				EFCDD14E1C1349BD0079C61B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCDD16B1C1349BD0079C61B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCDD1791C1349BD0079C61B /* ExtensionDelegate.m in Sources */,
+				EFCDD1761C1349BD0079C61B /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFCDD1631C1349BD0079C61B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFCDD15F1C1349BD0079C61B /* Watch Raytracer WatchKit App */;
+			targetProxy = EFCDD1621C1349BD0079C61B /* PBXContainerItemProxy */;
+		};
+		EFCDD1721C1349BD0079C61B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFCDD16E1C1349BD0079C61B /* Watch Raytracer WatchKit Extension */;
+			targetProxy = EFCDD1711C1349BD0079C61B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFCDD1551C1349BD0079C61B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFCDD1561C1349BD0079C61B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFCDD15A1C1349BD0079C61B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFCDD15B1C1349BD0079C61B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EFCDD1651C1349BD0079C61B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFCDD1661C1349BD0079C61B /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFCDD17D1C1349BD0079C61B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EFCDD17E1C1349BD0079C61B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFCDD1801C1349BD0079C61B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Watch Raytracer WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		EFCDD1811C1349BD0079C61B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Watch Raytracer WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		EFCDD1841C1349BD0079C61B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = Watch_Raytracer_WatchKit_Extension;
+				INFOPLIST_FILE = "Watch Raytracer WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		EFCDD1851C1349BD0079C61B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = Watch_Raytracer_WatchKit_Extension;
+				INFOPLIST_FILE = "Watch Raytracer WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		EFCDD1881C1349BD0079C61B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Watch Raytracer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EFCDD1891C1349BD0079C61B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Watch Raytracer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFCDD1441C1349BD0079C61B /* Build configuration list for PBXProject "Watch Raytracer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCDD17D1C1349BD0079C61B /* Debug */,
+				EFCDD17E1C1349BD0079C61B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFCDD17F1C1349BD0079C61B /* Build configuration list for PBXNativeTarget "Watch Raytracer WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCDD1801C1349BD0079C61B /* Debug */,
+				EFCDD1811C1349BD0079C61B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EFCDD1831C1349BD0079C61B /* Build configuration list for PBXNativeTarget "Watch Raytracer WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCDD1841C1349BD0079C61B /* Debug */,
+				EFCDD1851C1349BD0079C61B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EFCDD1871C1349BD0079C61B /* Build configuration list for PBXNativeTarget "Watch Raytracer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCDD1881C1349BD0079C61B /* Debug */,
+				EFCDD1891C1349BD0079C61B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFCDD1411C1349BD0079C61B /* Project object */;
+}
