@@ -1,5 +1,5 @@
 # Watch RayTracer
-![Picture](/watch.jpg?raw=true)
+<img src="/watch.jpg?raw=true" width="200">
 
 A simple ray tracer for iOS 9.0 and watchOS 2.0 written in Objetive-C. 
 
