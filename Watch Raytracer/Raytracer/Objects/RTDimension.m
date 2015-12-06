@@ -55,7 +55,7 @@
 
 - (BOOL)containsPositionX:(double)x Y:(double)y {
     
-    return (x > 0.0 && x < _width) && (y > 0.0 && y < _height);
+    return (x >= 0.0 && x < _width) && (y >= 0.0 && y < _height);
 }
 
 @end

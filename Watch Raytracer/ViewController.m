@@ -14,7 +14,6 @@
 
 @interface ViewController ()
 @property (retain, nonatomic) IBOutlet UIImageView * imageView;
-
 @end
 
 @implementation ViewController

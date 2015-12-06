@@ -22,5 +22,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RTColour (UIKit)
++ (instancetype)colourWithUIColor:(UIColor *)color;
 - (UIColor *)asUIColor;
 @end

@@ -95,6 +95,13 @@
 
 @implementation RTColour (UIKit)
 
++ (instancetype)colourWithUIColor:(UIColor *)color {
+    
+    CGFloat red, green, blue;
+    [color getRed:&red green:&green blue:&blue alpha:nil];
+    return [RTColour colourWithRed:red * 255.0 green:green * 255.0 blue:blue * 255.0];
+}
+
 - (UIColor *)asUIColor {
     
     return [UIColor colorWithRed:self.red/255.f green:self.green/255.f blue:self.blue/255.f alpha:1.f];

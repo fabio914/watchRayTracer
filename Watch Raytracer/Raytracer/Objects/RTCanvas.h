@@ -21,5 +21,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RTCanvas (UIKit)
++ (instancetype)canvasWithImage:(UIImage *)image;
 - (UIImage *)image;
 @end

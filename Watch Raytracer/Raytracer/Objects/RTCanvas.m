@@ -114,6 +114,61 @@
 
 @implementation RTCanvas (UIKit)
 
++ (NSArray *)getRGBAsFromImage:(UIImage*)image atX:(int)x andY:(int)y count:(int)count {
+    
+    NSMutableArray * result = [NSMutableArray arrayWithCapacity:count];
+    CGImageRef imageRef = [image CGImage];
+    NSUInteger width = CGImageGetWidth(imageRef);
+    NSUInteger height = CGImageGetHeight(imageRef);
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    unsigned char *rawData = (unsigned char*) calloc(height * width * 4, sizeof(unsigned char));
+    NSUInteger bytesPerPixel = 4;
+    NSUInteger bytesPerRow = bytesPerPixel * width;
+    NSUInteger bitsPerComponent = 8;
+    CGContextRef context = CGBitmapContextCreate(rawData, width, height,
+                                                 bitsPerComponent, bytesPerRow, colorSpace,
+                                                 kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
+    CGColorSpaceRelease(colorSpace);
+    
+    CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
+    
+    NSUInteger byteIndex = (bytesPerRow * y) + x * bytesPerPixel;
+    
+    for (int i = 0 ; i < count ; ++i) {
+        
+        CGFloat red   = ((CGFloat) rawData[byteIndex]     ) / 255.0;
+        CGFloat green = ((CGFloat) rawData[byteIndex + 1] ) / 255.0;
+        CGFloat blue  = ((CGFloat) rawData[byteIndex + 2] ) / 255.0;
+        byteIndex += bytesPerPixel;
+        
+        UIColor *acolor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+        [result addObject:acolor];
+    }
+    
+    CGContextRelease(context);
+    free(rawData);
+    
+    return result;
+}
+
++ (instancetype)canvasWithImage:(UIImage *)image {
+    
+    RTCanvas * canvas = [self canvasWithDimension:[RTDimension dimensionWithSize:image.size]];
+    
+    unsigned width = floor(image.size.width), height = floor(image.size.height);
+    
+    NSArray * pixels = [self getRGBAsFromImage:image atX:0 andY:0 count:width * height];
+    
+    for(unsigned i = 0; i < height; i++) {
+        for(unsigned j = 0; j < width; j++) {
+            
+            [canvas setPixel:[RTColour colourWithUIColor:[pixels objectAtIndex:(i * width + j)]] atX:j y:i];
+        }
+    }
+    
+    return canvas;
+}
+
 - (UIImage *)image {
     
     UIGraphicsBeginImageContext([[self dimension] size]);
@@ -127,7 +182,7 @@
         }
     }
     
-    UIImage * image= UIGraphicsGetImageFromCurrentImageContext();
+    UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     return image;
