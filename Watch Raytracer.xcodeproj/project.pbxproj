@@ -20,6 +20,40 @@
 		EFCDD1761C1349BD0079C61B /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1751C1349BD0079C61B /* InterfaceController.m */; };
 		EFCDD1791C1349BD0079C61B /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1781C1349BD0079C61B /* ExtensionDelegate.m */; };
 		EFCDD17B1C1349BD0079C61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFCDD17A1C1349BD0079C61B /* Assets.xcassets */; };
+		EFCDD18E1C134D470079C61B /* RTPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD18D1C134D470079C61B /* RTPoint.m */; };
+		EFCDD1911C134DD70079C61B /* RTVector.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1901C134DD70079C61B /* RTVector.m */; };
+		EFCDD1951C1351A30079C61B /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1941C1351A30079C61B /* Model.m */; };
+		EFCDD1991C1353810079C61B /* RTColour.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1981C1353810079C61B /* RTColour.m */; };
+		EFCDD19C1C1357D90079C61B /* RTLight.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD19B1C1357D90079C61B /* RTLight.m */; };
+		EFCDD19F1C135AEB0079C61B /* RTMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD19E1C135AEB0079C61B /* RTMaterial.m */; };
+		EFCDD1A21C1360170079C61B /* RTCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1A11C1360170079C61B /* RTCamera.m */; };
+		EFCDD1A51C1363590079C61B /* RTRay.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1A41C1363590079C61B /* RTRay.m */; };
+		EFCDD1A81C1364C00079C61B /* RTDimension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1A71C1364C00079C61B /* RTDimension.m */; };
+		EFCDD1AB1C1366490079C61B /* RTCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1AA1C1366490079C61B /* RTCanvas.m */; };
+		EFCDD1AF1C136D2F0079C61B /* RTAbstractObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1AE1C136D2F0079C61B /* RTAbstractObject.m */; };
+		EFCDD1B21C1376D70079C61B /* RTScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1B11C1376D70079C61B /* RTScene.m */; };
+		EFCDD1B51C137DF90079C61B /* RTObjectBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1B41C137DF90079C61B /* RTObjectBuilder.m */; };
+		EFCDD1B81C1380990079C61B /* RTBox.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1B71C1380990079C61B /* RTBox.m */; };
+		EFCDD1BB1C1387730079C61B /* RTSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1BA1C1387730079C61B /* RTSphere.m */; };
+		EFCDD1BF1C138BAC0079C61B /* RTRayShooter.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1BE1C138BAC0079C61B /* RTRayShooter.m */; };
+		EFCDD1C21C138BB90079C61B /* RTRayTracer.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1C11C138BB90079C61B /* RTRayTracer.m */; };
+		EFCDD1C31C13B94B0079C61B /* RTRayShooter.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1BE1C138BAC0079C61B /* RTRayShooter.m */; };
+		EFCDD1C41C13B94B0079C61B /* RTRayTracer.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1C11C138BB90079C61B /* RTRayTracer.m */; };
+		EFCDD1C51C13B94B0079C61B /* RTAbstractObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1AE1C136D2F0079C61B /* RTAbstractObject.m */; };
+		EFCDD1C61C13B94B0079C61B /* RTScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1B11C1376D70079C61B /* RTScene.m */; };
+		EFCDD1C71C13B94B0079C61B /* RTObjectBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1B41C137DF90079C61B /* RTObjectBuilder.m */; };
+		EFCDD1C81C13B94B0079C61B /* RTBox.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1B71C1380990079C61B /* RTBox.m */; };
+		EFCDD1C91C13B94B0079C61B /* RTSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1BA1C1387730079C61B /* RTSphere.m */; };
+		EFCDD1CA1C13B94B0079C61B /* RTColour.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1981C1353810079C61B /* RTColour.m */; };
+		EFCDD1CB1C13B94B0079C61B /* RTLight.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD19B1C1357D90079C61B /* RTLight.m */; };
+		EFCDD1CC1C13B94B0079C61B /* RTMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD19E1C135AEB0079C61B /* RTMaterial.m */; };
+		EFCDD1CD1C13B94B0079C61B /* RTCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1A11C1360170079C61B /* RTCamera.m */; };
+		EFCDD1CE1C13B94B0079C61B /* RTRay.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1A41C1363590079C61B /* RTRay.m */; };
+		EFCDD1CF1C13B94B0079C61B /* RTDimension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1A71C1364C00079C61B /* RTDimension.m */; };
+		EFCDD1D01C13B94B0079C61B /* RTCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1AA1C1366490079C61B /* RTCanvas.m */; };
+		EFCDD1D11C13B94B0079C61B /* RTPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD18D1C134D470079C61B /* RTPoint.m */; };
+		EFCDD1D21C13B94B0079C61B /* RTVector.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1901C134DD70079C61B /* RTVector.m */; };
+		EFCDD1D31C13B94B0079C61B /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1941C1351A30079C61B /* Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +120,40 @@
 		EFCDD1781C1349BD0079C61B /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
 		EFCDD17A1C1349BD0079C61B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFCDD17C1C1349BD0079C61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFCDD18C1C134D470079C61B /* RTPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTPoint.h; sourceTree = "<group>"; };
+		EFCDD18D1C134D470079C61B /* RTPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPoint.m; sourceTree = "<group>"; };
+		EFCDD18F1C134DD70079C61B /* RTVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTVector.h; sourceTree = "<group>"; };
+		EFCDD1901C134DD70079C61B /* RTVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTVector.m; sourceTree = "<group>"; };
+		EFCDD1931C1351A30079C61B /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		EFCDD1941C1351A30079C61B /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		EFCDD1971C1353810079C61B /* RTColour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTColour.h; sourceTree = "<group>"; };
+		EFCDD1981C1353810079C61B /* RTColour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTColour.m; sourceTree = "<group>"; };
+		EFCDD19A1C1357D90079C61B /* RTLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLight.h; sourceTree = "<group>"; };
+		EFCDD19B1C1357D90079C61B /* RTLight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLight.m; sourceTree = "<group>"; };
+		EFCDD19D1C135AEB0079C61B /* RTMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMaterial.h; sourceTree = "<group>"; };
+		EFCDD19E1C135AEB0079C61B /* RTMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMaterial.m; sourceTree = "<group>"; };
+		EFCDD1A01C1360170079C61B /* RTCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCamera.h; sourceTree = "<group>"; };
+		EFCDD1A11C1360170079C61B /* RTCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCamera.m; sourceTree = "<group>"; };
+		EFCDD1A31C1363590079C61B /* RTRay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRay.h; sourceTree = "<group>"; };
+		EFCDD1A41C1363590079C61B /* RTRay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRay.m; sourceTree = "<group>"; };
+		EFCDD1A61C1364C00079C61B /* RTDimension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTDimension.h; sourceTree = "<group>"; };
+		EFCDD1A71C1364C00079C61B /* RTDimension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTDimension.m; sourceTree = "<group>"; };
+		EFCDD1A91C1366490079C61B /* RTCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCanvas.h; sourceTree = "<group>"; };
+		EFCDD1AA1C1366490079C61B /* RTCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCanvas.m; sourceTree = "<group>"; };
+		EFCDD1AD1C136D2F0079C61B /* RTAbstractObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTAbstractObject.h; sourceTree = "<group>"; };
+		EFCDD1AE1C136D2F0079C61B /* RTAbstractObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTAbstractObject.m; sourceTree = "<group>"; };
+		EFCDD1B01C1376D70079C61B /* RTScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTScene.h; sourceTree = "<group>"; };
+		EFCDD1B11C1376D70079C61B /* RTScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTScene.m; sourceTree = "<group>"; };
+		EFCDD1B31C137DF90079C61B /* RTObjectBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTObjectBuilder.h; sourceTree = "<group>"; };
+		EFCDD1B41C137DF90079C61B /* RTObjectBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTObjectBuilder.m; sourceTree = "<group>"; };
+		EFCDD1B61C1380990079C61B /* RTBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTBox.h; sourceTree = "<group>"; };
+		EFCDD1B71C1380990079C61B /* RTBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTBox.m; sourceTree = "<group>"; };
+		EFCDD1B91C1387730079C61B /* RTSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSphere.h; sourceTree = "<group>"; };
+		EFCDD1BA1C1387730079C61B /* RTSphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSphere.m; sourceTree = "<group>"; };
+		EFCDD1BD1C138BAC0079C61B /* RTRayShooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRayShooter.h; sourceTree = "<group>"; };
+		EFCDD1BE1C138BAC0079C61B /* RTRayShooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRayShooter.m; sourceTree = "<group>"; };
+		EFCDD1C01C138BB90079C61B /* RTRayTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRayTracer.h; sourceTree = "<group>"; };
+		EFCDD1C11C138BB90079C61B /* RTRayTracer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRayTracer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +197,7 @@
 		EFCDD14B1C1349BD0079C61B /* Watch Raytracer */ = {
 			isa = PBXGroup;
 			children = (
+				EFCDD18A1C1349E70079C61B /* Raytracer */,
 				EFCDD14F1C1349BD0079C61B /* AppDelegate.h */,
 				EFCDD1501C1349BD0079C61B /* AppDelegate.m */,
 				EFCDD1521C1349BD0079C61B /* ViewController.h */,
@@ -171,6 +240,79 @@
 				EFCDD17C1C1349BD0079C61B /* Info.plist */,
 			);
 			path = "Watch Raytracer WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		EFCDD18A1C1349E70079C61B /* Raytracer */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDD1BC1C138B740079C61B /* Engine */,
+				EFCDD1961C13535B0079C61B /* Objects */,
+				EFCDD18B1C134D310079C61B /* Geometry */,
+				EFCDD1931C1351A30079C61B /* Model.h */,
+				EFCDD1941C1351A30079C61B /* Model.m */,
+			);
+			path = Raytracer;
+			sourceTree = "<group>";
+		};
+		EFCDD18B1C134D310079C61B /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDD18C1C134D470079C61B /* RTPoint.h */,
+				EFCDD18D1C134D470079C61B /* RTPoint.m */,
+				EFCDD18F1C134DD70079C61B /* RTVector.h */,
+				EFCDD1901C134DD70079C61B /* RTVector.m */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
+		EFCDD1961C13535B0079C61B /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDD1AC1C136D0D0079C61B /* Scene */,
+				EFCDD1971C1353810079C61B /* RTColour.h */,
+				EFCDD1981C1353810079C61B /* RTColour.m */,
+				EFCDD19A1C1357D90079C61B /* RTLight.h */,
+				EFCDD19B1C1357D90079C61B /* RTLight.m */,
+				EFCDD19D1C135AEB0079C61B /* RTMaterial.h */,
+				EFCDD19E1C135AEB0079C61B /* RTMaterial.m */,
+				EFCDD1A01C1360170079C61B /* RTCamera.h */,
+				EFCDD1A11C1360170079C61B /* RTCamera.m */,
+				EFCDD1A31C1363590079C61B /* RTRay.h */,
+				EFCDD1A41C1363590079C61B /* RTRay.m */,
+				EFCDD1A61C1364C00079C61B /* RTDimension.h */,
+				EFCDD1A71C1364C00079C61B /* RTDimension.m */,
+				EFCDD1A91C1366490079C61B /* RTCanvas.h */,
+				EFCDD1AA1C1366490079C61B /* RTCanvas.m */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		EFCDD1AC1C136D0D0079C61B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDD1AD1C136D2F0079C61B /* RTAbstractObject.h */,
+				EFCDD1AE1C136D2F0079C61B /* RTAbstractObject.m */,
+				EFCDD1B01C1376D70079C61B /* RTScene.h */,
+				EFCDD1B11C1376D70079C61B /* RTScene.m */,
+				EFCDD1B31C137DF90079C61B /* RTObjectBuilder.h */,
+				EFCDD1B41C137DF90079C61B /* RTObjectBuilder.m */,
+				EFCDD1B61C1380990079C61B /* RTBox.h */,
+				EFCDD1B71C1380990079C61B /* RTBox.m */,
+				EFCDD1B91C1387730079C61B /* RTSphere.h */,
+				EFCDD1BA1C1387730079C61B /* RTSphere.m */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		EFCDD1BC1C138B740079C61B /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDD1BD1C138BAC0079C61B /* RTRayShooter.h */,
+				EFCDD1BE1C138BAC0079C61B /* RTRayShooter.m */,
+				EFCDD1C01C138BB90079C61B /* RTRayTracer.h */,
+				EFCDD1C11C138BB90079C61B /* RTRayTracer.m */,
+			);
+			path = Engine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,8 +446,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCDD1B51C137DF90079C61B /* RTObjectBuilder.m in Sources */,
+				EFCDD18E1C134D470079C61B /* RTPoint.m in Sources */,
+				EFCDD19F1C135AEB0079C61B /* RTMaterial.m in Sources */,
 				EFCDD1541C1349BD0079C61B /* ViewController.m in Sources */,
+				EFCDD19C1C1357D90079C61B /* RTLight.m in Sources */,
+				EFCDD1AB1C1366490079C61B /* RTCanvas.m in Sources */,
+				EFCDD1911C134DD70079C61B /* RTVector.m in Sources */,
+				EFCDD1991C1353810079C61B /* RTColour.m in Sources */,
+				EFCDD1BB1C1387730079C61B /* RTSphere.m in Sources */,
+				EFCDD1B81C1380990079C61B /* RTBox.m in Sources */,
+				EFCDD1951C1351A30079C61B /* Model.m in Sources */,
+				EFCDD1BF1C138BAC0079C61B /* RTRayShooter.m in Sources */,
 				EFCDD1511C1349BD0079C61B /* AppDelegate.m in Sources */,
+				EFCDD1A81C1364C00079C61B /* RTDimension.m in Sources */,
+				EFCDD1A51C1363590079C61B /* RTRay.m in Sources */,
+				EFCDD1C21C138BB90079C61B /* RTRayTracer.m in Sources */,
+				EFCDD1B21C1376D70079C61B /* RTScene.m in Sources */,
+				EFCDD1A21C1360170079C61B /* RTCamera.m in Sources */,
+				EFCDD1AF1C136D2F0079C61B /* RTAbstractObject.m in Sources */,
 				EFCDD14E1C1349BD0079C61B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,8 +473,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCDD1C71C13B94B0079C61B /* RTObjectBuilder.m in Sources */,
+				EFCDD1C81C13B94B0079C61B /* RTBox.m in Sources */,
+				EFCDD1C31C13B94B0079C61B /* RTRayShooter.m in Sources */,
+				EFCDD1CA1C13B94B0079C61B /* RTColour.m in Sources */,
+				EFCDD1CE1C13B94B0079C61B /* RTRay.m in Sources */,
+				EFCDD1CD1C13B94B0079C61B /* RTCamera.m in Sources */,
+				EFCDD1CC1C13B94B0079C61B /* RTMaterial.m in Sources */,
+				EFCDD1D11C13B94B0079C61B /* RTPoint.m in Sources */,
+				EFCDD1D21C13B94B0079C61B /* RTVector.m in Sources */,
+				EFCDD1D01C13B94B0079C61B /* RTCanvas.m in Sources */,
 				EFCDD1791C1349BD0079C61B /* ExtensionDelegate.m in Sources */,
+				EFCDD1CF1C13B94B0079C61B /* RTDimension.m in Sources */,
+				EFCDD1D31C13B94B0079C61B /* Model.m in Sources */,
+				EFCDD1CB1C13B94B0079C61B /* RTLight.m in Sources */,
+				EFCDD1C61C13B94B0079C61B /* RTScene.m in Sources */,
+				EFCDD1C51C13B94B0079C61B /* RTAbstractObject.m in Sources */,
 				EFCDD1761C1349BD0079C61B /* InterfaceController.m in Sources */,
+				EFCDD1C41C13B94B0079C61B /* RTRayTracer.m in Sources */,
+				EFCDD1C91C13B94B0079C61B /* RTSphere.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +621,7 @@
 		EFCDD1801C1349BD0079C61B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = "Watch Raytracer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer.watchkitapp.watchkitextension";
@@ -459,6 +636,7 @@
 		EFCDD1811C1349BD0079C61B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = "Watch Raytracer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer.watchkitapp.watchkitextension";
@@ -474,6 +652,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				IBSC_MODULE = Watch_Raytracer_WatchKit_Extension;
 				INFOPLIST_FILE = "Watch Raytracer WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer.watchkitapp";
@@ -489,6 +668,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				IBSC_MODULE = Watch_Raytracer_WatchKit_Extension;
 				INFOPLIST_FILE = "Watch Raytracer WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer.watchkitapp";
@@ -504,6 +684,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = "Watch Raytracer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer";
@@ -515,6 +696,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = "Watch Raytracer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer";
