@@ -15,56 +15,96 @@
 
 @interface RTRayTracer ()
 
-+ (RTColour *)traceRay:(RTRay *)ray onScene:(RTScene *)scene step:(unsigned)step;
-
-+ (RTColour *)phongShadowWithObject:(id<RTRayTracerObjectProtocol>)object scene:(RTScene *)scene normal:(RTVector *)normal reflection:(RTVector *)reflection intersection:(RTPoint *)intersection;
+@property (nonatomic, retain) RTScene * scene;
+@property (nonatomic, retain) RTDimension * dimension;
+@property (nonatomic, assign) BOOL antialiasing;
+@property (nonatomic, assign) unsigned depth;
 
 @end
 
 @implementation RTRayTracer
 
-+ (RTCanvas *)rayTraceScene:(RTScene *)scene dimension:(RTDimension *)dimension {
++ (instancetype)niceRayTracerWithScene:(RTScene *)scene dimension:(RTDimension *)dimension {
     
-    RTCanvas * canvas = [RTCanvas canvasWithDimension:dimension];
-    RTRayShooter * shooter = [RTRayShooter rayShooterWithCamera:scene.camera dimension:dimension];
+    return [self raytracerWithScene:scene dimension:dimension depth:5 antialiasing:YES];
+}
+
++ (instancetype)fastRayTracerWithScene:(RTScene *)scene dimension:(RTDimension *)dimension {
     
-    for(double y = 0.f; y < dimension.height; y++) {
-        for(double x = 0.f; x < dimension.width; x++) {
-         
-            double red = 0.0, green = 0.0, blue = 0.0;
-            
-            @autoreleasepool {
+    return [self raytracerWithScene:scene dimension:dimension depth:2 antialiasing:NO];
+}
+
++ (instancetype)raytracerWithScene:(RTScene *)scene dimension:(RTDimension *)dimension depth:(unsigned)depth antialiasing:(BOOL)antialiasing {
+    
+    return [[[self alloc] initWithScene:scene dimension:dimension depth:depth antialiasing:antialiasing] autorelease];
+}
+
+- (instancetype)initWithScene:(RTScene *)scene dimension:(RTDimension *)dimension depth:(unsigned)depth antialiasing:(BOOL)antialiasing {
+    
+    if(self = [super init]) {
+        
+        _scene = [scene retain];
+        _dimension = [dimension retain];
+        _depth = depth;
+        _antialiasing = antialiasing;
+    }
+    
+    return self;
+}
+
+- (RTCanvas *)trace {
+    
+    RTCanvas * canvas = [RTCanvas canvasWithDimension:_dimension];
+    RTRayShooter * shooter = [RTRayShooter rayShooterWithCamera:_scene.camera dimension:_dimension];
+    
+    if(_antialiasing) {
+        
+        for(double y = 0.f; y < _dimension.height; y++) {
+            for(double x = 0.f; x < _dimension.width; x++) {
                 
-#ifdef ANTIALIASING
-                for(double yPart = -0.75; yPart < 1.0; yPart += 0.5) {
-                    for(double xPart = -0.75; xPart < 1.0; xPart += 0.5) {
-#else
-                        const double xPart = 0, yPart = 0;
-#endif
-                        
-                        RTRay * ray = [shooter rayAtX:xPart + x Y:yPart + y];
-                        RTColour * colour = [self traceRay:ray onScene:scene step:0];
-                        red += colour.red; green += colour.green; blue += colour.blue;
-#ifdef ANTIALIASING
+                double red = 0.0, green = 0.0, blue = 0.0;
+                
+                @autoreleasepool {
+                    
+                    for(double yPart = -0.75; yPart < 1.0; yPart += 0.5) {
+                        for(double xPart = -0.75; xPart < 1.0; xPart += 0.5) {
+                            
+                            RTRay * ray = [shooter rayAtX:xPart + x Y:yPart + y];
+                            RTColour * colour = [self traceRay:ray step:0];
+                            red += colour.red; green += colour.green; blue += colour.blue;
+                        }
                     }
                 }
-#endif
+                
+                red /= 16.0; green /= 16.0; blue /= 16.0;
+                
+                [canvas setPixel:[[RTColour colourWithRed:red green:green blue:blue] gammaCorrected] atX:x y:y];
             }
-#ifdef ANTIALIASING
-            red /= 16.0; green /= 16.0; blue /= 16.0;
-#endif
-            [canvas setPixel:[[RTColour colourWithRed:red green:green blue:blue] gammaCorrected] atX:x y:y];
+        }
+    }
+    
+    else {
+        
+        for(double y = 0.f; y < _dimension.height; y++) {
+            for(double x = 0.f; x < _dimension.width; x++) {
+                
+                @autoreleasepool {
+                    RTRay * ray = [shooter rayAtX:x Y:y];
+                    RTColour * colour = [self traceRay:ray step:0];
+                    [canvas setPixel:[colour gammaCorrected] atX:x y:y];
+                }
+            }
         }
     }
     
     return canvas;
 }
 
-+ (RTColour *)traceRay:(RTRay *)ray onScene:(RTScene *)scene step:(unsigned)step {
+- (RTColour *)traceRay:(RTRay *)ray step:(unsigned)step {
     
-    if(step < kRayTracerMaxSteps && ray.energy > kRayTracerMinEnergy) {
+    if(step < _depth && ray.energy > kRayTracerMinEnergy) {
         
-        RTIntersection * intersect = [scene intersect:ray];
+        RTIntersection * intersect = [_scene intersect:ray];
         
         if(intersect) {
             
@@ -84,11 +124,11 @@
                                                          Y:(ray.direction.y - k * normal.y)
                                                          Z:(ray.direction.z - k * normal.z)] normalize];
             
-            RTColour * local = [self phongShadowWithObject:intersect.object scene:scene normal:normal reflection:reflection intersection:intersection];
+            RTColour * local = [self phongShadowWithObject:intersect.object normal:normal reflection:reflection intersection:intersection];
             
             RTRay * reflectedRay = [RTRay rayWithOrigin:intersection direction:reflection energy:ray.energy * intersect.object.material.reflection];
             
-            RTColour * reflectionColour = [self traceRay:reflectedRay onScene:scene step:step + 1];
+            RTColour * reflectionColour = [self traceRay:reflectedRay step:step + 1];
             
             return [RTColour colourWithRed:(local.red * ray.energy) + (reflectionColour.red * reflectedRay.energy)
                                      green:(local.green * ray.energy) + (reflectionColour.green * reflectedRay.energy)
@@ -96,15 +136,15 @@
         }
     }
     
-    return [scene.background colourByMultiplyingByFactor:ray.energy];
+    return [_scene.background colourByMultiplyingByFactor:ray.energy];
 }
 
-+ (RTColour *)phongShadowWithObject:(id<RTRayTracerObjectProtocol>)object scene:(RTScene *)scene normal:(RTVector *)normal reflection:(RTVector *)reflection intersection:(RTPoint *)intersectionPoint {
+- (RTColour *)phongShadowWithObject:(id<RTRayTracerObjectProtocol>)object normal:(RTVector *)normal reflection:(RTVector *)reflection intersection:(RTPoint *)intersectionPoint {
     
     RTMaterial * material = object.material;
     double red = 0.0, green = 0.0, blue = 0.0;
     
-    for(RTLight * light in scene.ligths) {
+    for(RTLight * light in _scene.ligths) {
         
         red += material.ambient.red * light.ambient.red;
         green += material.ambient.green * light.ambient.green;
@@ -112,7 +152,7 @@
         
         RTVector * shadowDir = [[RTVector vectorWithBeginning:intersectionPoint endPoint:light.position] normalize];
         RTRay * shadowRay = [RTRay rayWithOrigin:intersectionPoint direction:shadowDir];
-        RTIntersection * intersection = [scene intersect:shadowRay];
+        RTIntersection * intersection = [_scene intersect:shadowRay];
         
         if(intersection == nil) {
             
@@ -141,6 +181,13 @@
     }
     
     return [RTColour colourWithRed:red green:green blue:blue];
+}
+
+- (void)dealloc {
+    
+    [_dimension release], _dimension = nil;
+    [_scene release], _scene = nil;
+    [super dealloc];
 }
 
 @end

@@ -12,7 +12,8 @@
 #import "RTBox.h"
 
 @interface InterfaceController()
-@property (retain, nonatomic) IBOutlet WKInterfaceImage *interfaceImage;
+@property (retain, nonatomic) IBOutlet WKInterfaceImage * interfaceImage;
+@property (retain, nonatomic) NSThread * renderingThread;
 @end
 
 
@@ -25,14 +26,17 @@
 - (void)willActivate {
     
     [super willActivate];
-    [self performSelectorInBackground:@selector(render) withObject:nil];
+    
+    [self.renderingThread cancel];
+    self.renderingThread = [[[NSThread alloc] initWithTarget:self selector:@selector(render) object:nil] autorelease];
+    [self.renderingThread start];
 }
 
 - (void)render {
     
     unsigned angle = 0;
     
-    while(1) {
+    while(![[NSThread currentThread] isCancelled]) {
         
         RTScene * scene = [RTScene sceneWithCamera:[RTCamera cameraWithEye:[RTPoint pointWithX:5.0 * cos((double)angle * (M_PI/180.0)) Y:8.0 Z:5.0 * sin((double)angle * (M_PI/180.0))]
                                                                     lookAt:[RTPoint pointWithX:0.0 Y:5.0 Z:0.0]
@@ -62,7 +66,12 @@
                                                                       diffuse:[RTColour colourWithRed:255.0 green:255.0 blue:255.0]
                                                                      specular:[RTColour colourWithRed:255.0 green:255.0 blue:255.0]]]];
         
-        UIImage * result = [[RTRayTracer rayTraceScene:scene dimension:[RTDimension dimensionWithWidth:200.0 height:200.0]] image];
+        RTRayTracer * rt = [RTRayTracer fastRayTracerWithScene:scene dimension:[RTDimension dimensionWithWidth:100.0 height:100.0]];
+        
+//        RTRayTracer * rt = [RTRayTracer niceRayTracerWithScene:scene dimension:[RTDimension dimensionWithWidth:200.0 height:200.0]];
+        
+        UIImage * result = [[rt trace] image];
+        
         [self performSelectorOnMainThread:@selector(setImage:) withObject:result waitUntilDone:YES];
         
         angle += 30;
@@ -76,12 +85,14 @@
 
 - (void)didDeactivate {
     [super didDeactivate];
+    [_renderingThread cancel];
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
 }
 
 - (void)dealloc {
     
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
+    [_renderingThread cancel], [_renderingThread release], _renderingThread = nil;
     [_interfaceImage release], _interfaceImage = nil;
     [super dealloc];
 }

@@ -4,7 +4,7 @@
 A simple ray tracer for iOS 9.0 and watchOS 2.0 written in Objetive-C. 
 
 ## Why?
-I wanted to be the first one to run a ray tracer on a watch. It works, however it may take a while to render a single frame on the Apple Watch (try undefining "ANTIALIASING" to make it run faster).
+I wanted to be the first one to run a ray tracer on a watch. It works, however it may take a while to render a single frame on the Apple Watch.
 
 ## Example
 ### Creating a scene
@@ -27,8 +27,23 @@ RTScene * scene = [RTScene sceneWithCamera:camera bakgroundColour:backgroundColo
 ```
 
 ### Rendering that scene
+
+Rendering with anti-aliasing and more reflections
 ```objective-c
-UIImage * result = [[RTRayTracer rayTraceScene:scene dimension:[RTDimension dimensionWithSize:CGSizeMake(100, 100)]] image];
+
+RTRayTracer * rt = [RTRayTracer niceRayTracerWithScene:scene dimension:[RTDimension dimensionWithSize:CGSizeMake(100, 100)]];
+
+UIImage * result = [[rt trace] image];
+
+```
+
+Rendering without anti-aliasing and with less reflections
+```objective-c
+
+RTRayTracer * rt = [RTRayTracer fastRayTracerWithScene:scene dimension:[RTDimension dimensionWithSize:CGSizeMake(100, 100)]];
+
+UIImage * result = [[rt trace] image];
+
 ```
 
 ### Requires

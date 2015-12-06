@@ -12,10 +12,15 @@
 
 #define kRayTracerMinEnergy 0.001
 #define kRayTracerEpsilon   0.001
-#define kRayTracerMaxSteps  5
 
 @interface RTRayTracer : NSObject
 
-+ (RTCanvas *)rayTraceScene:(RTScene *)scene dimension:(RTDimension *)dimension;
++ (instancetype)raytracerWithScene:(RTScene *)scene dimension:(RTDimension *)dimension depth:(unsigned)depth antialiasing:(BOOL)antialiasing;
+
++ (instancetype)niceRayTracerWithScene:(RTScene *)scene dimension:(RTDimension *)dimension;
+
++ (instancetype)fastRayTracerWithScene:(RTScene *)scene dimension:(RTDimension *)dimension;
+
+- (RTCanvas *)trace;
 
 @end
