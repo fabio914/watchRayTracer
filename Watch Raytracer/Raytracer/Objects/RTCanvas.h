@@ -16,6 +16,8 @@
 - (RTColour *)pixelAtX:(double)x Y:(double)y;
 - (void)setPixel:(RTColour *)colour atX:(double)x y:(double)y;
 
+- (RTDimension *)dimension;
+
 @end
 
 #import <UIKit/UIKit.h>

@@ -153,9 +153,8 @@
 
 + (instancetype)canvasWithImage:(UIImage *)image {
     
-    RTCanvas * canvas = [self canvasWithDimension:[RTDimension dimensionWithSize:image.size]];
-    
-    unsigned width = floor(image.size.width), height = floor(image.size.height);
+    unsigned width = floor(image.size.width) * [image scale], height = floor(image.size.height) * [image scale];
+    RTCanvas * canvas = [self canvasWithDimension:[RTDimension dimensionWithWidth:width height:height]];
     
     NSArray * pixels = [self getRGBAsFromImage:image atX:0 andY:0 count:width * height];
     

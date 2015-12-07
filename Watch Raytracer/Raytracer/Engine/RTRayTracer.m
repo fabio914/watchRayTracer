@@ -136,7 +136,7 @@
         }
     }
     
-    return [_scene.background colourByMultiplyingByFactor:ray.energy];
+    return [_scene.background colourForRay:ray];
 }
 
 - (RTColour *)phongShadowWithObject:(id<RTRayTracerObjectProtocol>)object normal:(RTVector *)normal reflection:(RTVector *)reflection intersection:(RTPoint *)intersectionPoint {

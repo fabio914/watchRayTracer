@@ -34,7 +34,7 @@
     if(![super isValidWithRepresentation:representation])
         return NO;
     
-    if(![RTColour isValidWithRepresentation:representation[@"background"]])
+    if(![RTBackground isValidWithRepresentation:representation[@"background"]])
         return NO;
     
     if(![RTCamera isValidWithRepresentation:representation[@"camera"]])
@@ -65,7 +65,7 @@
     
     if(self = [super initWithRepresentation:representation]) {
         
-        _background = [[RTColour alloc] initWithRepresentation:representation[@"background"]];
+        _background = [[RTBackground alloc] initWithRepresentation:representation[@"background"]];
         _camera = [[RTCamera alloc] initWithRepresentation:representation[@"camera"]];
         
         NSMutableArray * objects = [NSMutableArray array];
@@ -90,7 +90,7 @@
     return self;
 }
 
-+ (instancetype)sceneWithCamera:(RTCamera *)camera bakgroundColour:(RTColour *)background objects:(NSArray<RTAbstractObject *> *)objects lights:(NSArray<RTLight *> *)lights {
++ (instancetype)sceneWithCamera:(RTCamera *)camera bakground:(RTBackground *)background objects:(NSArray<RTAbstractObject *> *)objects lights:(NSArray<RTLight *> *)lights {
     
     RTScene * scene = [[self alloc] init];
     scene.camera = camera;

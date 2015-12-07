@@ -1,5 +1,7 @@
 # Watch RayTracer
+
 <img src="/watch.jpg?raw=true" width="200">
+<img src="/watch2.jpg?raw=true" width="200">
 
 A simple ray tracer for iOS 9.0 and watchOS 2.0 written in Objetive-C. 
 
@@ -11,9 +13,9 @@ I wanted to be the first one to run a ray tracer on a watch. It works, however i
 ```objective-c
 RTCamera * camera = [RTCamera cameraWithEye:[RTPoint pointWithX:-5.0 Y:8.0 Z:5.0] lookAt:[RTPoint pointWithX:0.0 Y:5.0 Z:0.0] up:[RTVector vectorWithX:0.0 Y:1.0 Z:0.0] fov:45.0 zvp:0.1];
     
-RTColour * backgroundColour = [RTColour colourWithRed:40.0 green:40.0 blue:40.0];
+RTBackground * background = [RTBackground backgroundWithCanvas:[RTCanvas canvasWithImage:[UIImage imageNamed:@"photosphere"]]];
     
-RTMaterial * sphereMaterial = [RTMaterial materialWithAmbient:[RTComponent componentWithRed:0.1 green:0.1 blue:0.1] diffuse:[RTComponent componentWithRed:0.8 green:0.8 blue:0.08] specular:[RTComponent componentWithRed:0.98 green:0.98 blue:0.8] shininess:300.0 reflection:0.15 transparency:0.0];
+RTMaterial * sphereMaterial = [RTMaterial materialWithAmbient:[RTComponent componentWithRed:0.1 green:0.1 blue:0.1] diffuse:[RTComponent componentWithRed:0.8 green:0.8 blue:0.08] specular:[RTComponent componentWithRed:0.98 green:0.98 blue:0.8] shininess:300.0 reflection:0.9 transparency:0.0];
     
 RTSphere * sphere = [RTSphere sphereWithMaterial:sphereMaterial position:[RTPoint pointWithX:0.0 Y:5.0 Z:0.0] radius:1.0];
 
@@ -23,7 +25,7 @@ RTBox * box = [RTBox boxWithMaterial:boxMaterial position:[RTPoint pointWithX:0.
     
 RTLight * light = [RTLight lightAtPosition:[RTPoint pointWithX:2.0 Y:11.0 Z:6.0] withAmbient:[RTColour colourWithRed:255.0 green:255.0 blue:255.0] diffuse:[RTColour colourWithRed:255.0 green:255.0 blue:255.0] specular:[RTColour colourWithRed:255.0 green:255.0 blue:255.0]];
     
-RTScene * scene = [RTScene sceneWithCamera:camera bakgroundColour:backgroundColour objects:@[sphere, box] lights:@[light]];
+RTScene * scene = [RTScene sceneWithCamera:camera bakground:background objects:@[sphere, box] lights:@[light]];
 ```
 
 ### Rendering that scene
@@ -51,6 +53,9 @@ UIImage * result = [[rt trace] image];
 
 ### Developer
 [Fabio de Albuquerque Dela Antonio](http://fabio914.blogspot.com)
+
+### Credits
+Photo sphere by [Steve Troletti](http://www.trolettiphoto.com)
 
 
 

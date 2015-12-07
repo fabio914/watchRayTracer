@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "final.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "photosphere@2x.png",
       "scale" : "2x"
     },
     {

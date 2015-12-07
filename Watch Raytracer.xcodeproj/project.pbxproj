@@ -54,6 +54,8 @@
 		EFCDD1D11C13B94B0079C61B /* RTPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD18D1C134D470079C61B /* RTPoint.m */; };
 		EFCDD1D21C13B94B0079C61B /* RTVector.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1901C134DD70079C61B /* RTVector.m */; };
 		EFCDD1D31C13B94B0079C61B /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1941C1351A30079C61B /* Model.m */; };
+		EFCDD1D61C14F1B60079C61B /* RTBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1D51C14F1B60079C61B /* RTBackground.m */; };
+		EFCDD1D71C14F5040079C61B /* RTBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDD1D51C14F1B60079C61B /* RTBackground.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +156,8 @@
 		EFCDD1BE1C138BAC0079C61B /* RTRayShooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRayShooter.m; sourceTree = "<group>"; };
 		EFCDD1C01C138BB90079C61B /* RTRayTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRayTracer.h; sourceTree = "<group>"; };
 		EFCDD1C11C138BB90079C61B /* RTRayTracer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRayTracer.m; sourceTree = "<group>"; };
+		EFCDD1D41C14F1B60079C61B /* RTBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTBackground.h; sourceTree = "<group>"; };
+		EFCDD1D51C14F1B60079C61B /* RTBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTBackground.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +304,8 @@
 				EFCDD1B71C1380990079C61B /* RTBox.m */,
 				EFCDD1B91C1387730079C61B /* RTSphere.h */,
 				EFCDD1BA1C1387730079C61B /* RTSphere.m */,
+				EFCDD1D41C14F1B60079C61B /* RTBackground.h */,
+				EFCDD1D51C14F1B60079C61B /* RTBackground.m */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -382,12 +388,15 @@
 				TargetAttributes = {
 					EFCDD1481C1349BD0079C61B = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 38USQ67WZ9;
 					};
 					EFCDD15F1C1349BD0079C61B = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 38USQ67WZ9;
 					};
 					EFCDD16E1C1349BD0079C61B = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 38USQ67WZ9;
 					};
 				};
 			};
@@ -464,6 +473,7 @@
 				EFCDD1C21C138BB90079C61B /* RTRayTracer.m in Sources */,
 				EFCDD1B21C1376D70079C61B /* RTScene.m in Sources */,
 				EFCDD1A21C1360170079C61B /* RTCamera.m in Sources */,
+				EFCDD1D61C14F1B60079C61B /* RTBackground.m in Sources */,
 				EFCDD1AF1C136D2F0079C61B /* RTAbstractObject.m in Sources */,
 				EFCDD14E1C1349BD0079C61B /* main.m in Sources */,
 			);
@@ -484,6 +494,7 @@
 				EFCDD1D21C13B94B0079C61B /* RTVector.m in Sources */,
 				EFCDD1D01C13B94B0079C61B /* RTCanvas.m in Sources */,
 				EFCDD1791C1349BD0079C61B /* ExtensionDelegate.m in Sources */,
+				EFCDD1D71C14F5040079C61B /* RTBackground.m in Sources */,
 				EFCDD1CF1C13B94B0079C61B /* RTDimension.m in Sources */,
 				EFCDD1D31C13B94B0079C61B /* Model.m in Sources */,
 				EFCDD1CB1C13B94B0079C61B /* RTLight.m in Sources */,
@@ -622,6 +633,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Watch Raytracer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer.watchkitapp.watchkitextension";
@@ -637,6 +649,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Watch Raytracer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer.watchkitapp.watchkitextension";
@@ -653,6 +666,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IBSC_MODULE = Watch_Raytracer_WatchKit_Extension;
 				INFOPLIST_FILE = "Watch Raytracer WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer.watchkitapp";
@@ -669,6 +683,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IBSC_MODULE = Watch_Raytracer_WatchKit_Extension;
 				INFOPLIST_FILE = "Watch Raytracer WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer.watchkitapp";
@@ -685,6 +700,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Watch Raytracer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer";
@@ -697,6 +713,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Watch Raytracer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bluenose.Watch-Raytracer";
@@ -723,6 +740,7 @@
 				EFCDD1811C1349BD0079C61B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFCDD1831C1349BD0079C61B /* Build configuration list for PBXNativeTarget "Watch Raytracer WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -731,6 +749,7 @@
 				EFCDD1851C1349BD0079C61B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFCDD1871C1349BD0079C61B /* Build configuration list for PBXNativeTarget "Watch Raytracer" */ = {
 			isa = XCConfigurationList;
@@ -739,6 +758,7 @@
 				EFCDD1891C1349BD0079C61B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
